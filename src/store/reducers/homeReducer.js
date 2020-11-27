@@ -9,7 +9,7 @@ const INITIAL_STATE = {
   flag: false,
 };
 
-export default (state = INITIAL_STATE, action) => {
+const homeReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
     case "TRANSACTION":
       return {
@@ -75,3 +75,5 @@ export default (state = INITIAL_STATE, action) => {
       return state;
   }
 };
+
+export default homeReducer;

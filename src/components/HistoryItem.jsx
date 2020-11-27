@@ -4,17 +4,8 @@ import { connect } from "react-redux";
 import "../style/HistoryItem.css";
 import { deleteTransactionHistory } from "../store/actions/homeActions";
 
-const useStyles = makeStyles(() => ({
-  divide: {
-    marginBottom: "15px",
-  },
-}));
-
-
-
 const HistoryItem = ({ discription, value, type, id, deleteTransactionHistory }) => {
   const transactionType = type === "income" ? "incomeBorder" : "expenseBorder";
-  const classes = useStyles();
 
   return (
     <div className={`HistoryItem ${transactionType}`}>
