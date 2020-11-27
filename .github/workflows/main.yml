@@ -31,13 +31,13 @@ jobs:
         run:  npm install
         
       - name: Create Build
-        run: npm build
+        run: npm run build
       
       - name: Installing surge 
         run: npm install -g surge
       
       - name: Deploy using surge
-        run: surge ./build/ react-expenses-tracker-app.surge.sh  --token ${{secrets.SURGE_TOKEN}} 
+        run: surge ./build/ react-expenses-tracker-app-abd-jam.surge.sh  --token ${{secrets.SURGE_TOKEN}} 
       
 
     
