@@ -1,0 +1,9 @@
+.History {
+  margin-top: 15px;
+  padding-left: 10px;
+}
+.History > .heading {
+  font-weight: 200;
+  font-size: 18px;
+  margin-bottom: 10px;
+}

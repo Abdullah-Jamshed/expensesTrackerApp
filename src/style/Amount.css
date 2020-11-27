@@ -1,0 +1,42 @@
+.Amount > .currentBalance h5 {
+  font-size: 17px;
+  padding: 2px;
+}
+.Amount > .income,
+.expense {
+  padding: 0px 50px;
+  text-align: center;
+}
+
+.Amount > .income > h5,
+.expense > h5 {
+  font-size: 17px;
+  margin-bottom: 5px;
+  font-weight: 100;
+}
+.Amount > .income > p,
+.expense > p {
+  font-size: 20px;
+}
+
+.Amount > .currentBalance p {
+  font-size: 30px;
+  padding: 4px;
+}
+
+.Amount > .income h5 {
+  color: rgb(0, 196, 0);
+}
+.Amount > .expense h5 {
+  color: rgb(255, 110, 110);
+}
+
+/* Optional Digit Coloring */
+/* 
+.Amount > .income p {
+    color: rgb(0, 196, 0);
+  }
+  .Amount > .expense p {
+    color: rgb(255, 110, 110);
+  }
+   */

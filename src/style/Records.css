@@ -1,0 +1,9 @@
+.Records {
+  display: flex !important;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: max-content !important;
+  margin: 0px auto;
+  box-shadow: 0 0 8px 1px rgb(236, 236, 236);
+  padding: 20px 0px;
+}

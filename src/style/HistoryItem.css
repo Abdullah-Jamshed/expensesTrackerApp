@@ -1,0 +1,32 @@
+.HistoryItem {
+  display: flex;
+  /* height: 300px; */
+  border: 1px solid rgb(238, 238, 238);
+  border-radius: 3px;
+  padding: 10px 10px;
+  margin-bottom: 7px;
+}
+
+
+
+
+
+.incomeBorder {
+  border-right: 5px solid rgb(0, 196, 0);
+}
+.expenseBorder {
+  border-right: 5px solid rgb(255, 110, 110);
+}
+
+.HistoryItem > .amount {
+  padding: 0px 7px;
+  margin-left: auto;
+}
+
+.HistoryItem i {
+  padding: 0px 7px;
+  color: rgb(185, 185, 185);
+}
+.HistoryItem i:hover {
+  color: rgb(82, 82, 82);
+}

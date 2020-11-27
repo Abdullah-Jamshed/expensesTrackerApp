@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.App > .Card {
+  /* text-align: center; */
+  border-radius: 5px;
+  box-shadow: 0 0 7px 1px rgb(235, 235, 235);
+  padding: 25px 10px;
+}
