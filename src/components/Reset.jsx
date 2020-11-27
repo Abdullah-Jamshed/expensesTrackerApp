@@ -8,7 +8,6 @@ const useStyle = makeStyles((theme) => ({
     paddingLeft: "10px",
   },
   resetButton: {
-    // textAlign: "center",
     marginTop: "10px",
   },
 }));
