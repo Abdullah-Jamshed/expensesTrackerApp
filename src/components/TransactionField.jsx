@@ -18,16 +18,9 @@ const useStyles = makeStyles((theme) => ({
 const TransactionField = (props) => {
   const classes = useStyles();
 
-  // const buttonStatus = props.transactionDiscription !== "" && props.transactionAmount !== "";
-  // const amountLimit = props.transactionType === "expense" && Number(props.transactionAmount) > Number(props.current.value) ? false : true;
-  // console.log(Number(props.transactionAmount) <= Number(props.current.value));
-  // console.log(amountLimit);
-  // console.log(buttonStatus && amountLimit);
-
   const amountHandler = (e) => {
     if (!isNaN(e.target.value)) {
       props.transactionAmountSet(e.target.value);
-      // props.transactionButton(buttonStatus);
     }
   };
 
@@ -57,7 +50,7 @@ const TransactionField = (props) => {
           disabled={props.transactionType === null}
           value={props.transactionAmount}
           onChange={amountHandler}
-          helperText={props.transactionType === "expense" ? "Amount Should be less than current Balance":""}
+          helperText={props.transactionType === "expense" ? "Amount Should be less than current Balance" : ""}
         />
       </form>
     </div>

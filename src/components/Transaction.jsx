@@ -4,7 +4,6 @@ import firebase from "../config/firebase";
 import { Divider, Button, makeStyles } from "@material-ui/core";
 import {
   transactionTypeAction,
-  // transactionHistoryAction,
   addTransactionHistory,
   transactionDeposite,
   transactionPayment,
@@ -13,7 +12,6 @@ import {
   fetchCurrentBalance,
   fetchTotalIncome,
   fetchTotalExpense,
-  // transactionButton,
 } from "../store/actions/homeActions";
 
 import TransactionField from "./TransactionField";
@@ -34,10 +32,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Transaction = (props) => {
-  // console.log(props.flag);
   const classes = useStyles();
 
-  //  > props.currentBalance ? false : true;
   const buttonStatus = props.transactionDiscription !== "" && props.transactionAmount !== "";
 
   const transaction = () => {
@@ -57,20 +53,11 @@ const Transaction = (props) => {
       firebase.database().ref("/").child("currentBalance").set(newBalance);
       props.transactionDepositeSet({ newBalance, totalIncome });
       props.addTransactionHistory({ discription: transactionDiscription, value: transactionAmount, type: transactionType });
-      // props.transactionHistorySet({ discription: transactionDiscription, value: transactionAmount, type: transactionType });
 
       props.transactionDiscriptionSet("");
       props.transactionAmountSet("");
     }
   };
-
-  // useEffect(() => {
-  //   props.fetchCurrentBalance();
-  //   props.fetchTotalIncome();
-  //   props.fetchTotalExpense();
-  //   props.transactionHistory();
-
-  // }, []);
 
   return (
     <div className='Transaction'>
@@ -128,7 +115,6 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     transactionTypeSet: (type) => dispatch(transactionTypeAction(type)),
-    // transactionHistorySet: (transaction) => dispatch(transactionHistoryAction(transaction)),
     addTransactionHistory: (transaction) => dispatch(addTransactionHistory(transaction)),
     transactionDepositeSet: (transaction) => dispatch(transactionDeposite(transaction)),
     transactionPaymentSet: (transaction) => dispatch(transactionPayment(transaction)),

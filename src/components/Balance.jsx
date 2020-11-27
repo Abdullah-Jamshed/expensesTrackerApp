@@ -21,4 +21,3 @@ const mapDispatchToProps = () => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Balance);
-// export default Balance;

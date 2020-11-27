@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
 const Records = ({ income, expense }) => {
   const classes = useStyles();
   return (
-    // <div className='Records'>
     <Container className='Records' maxWidth='sm'>
       <Amount heading='Income' type={income.type} amount={income.value} />
       <Hidden xsDown>
@@ -23,7 +22,6 @@ const Records = ({ income, expense }) => {
       </Hidden>
       <Amount heading='Expense' type={expense.type} amount={expense.value} />
     </Container>
-    // </div>
   );
 };
 

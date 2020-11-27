@@ -1,7 +1,5 @@
 import React from "react";
-// import { makeStyles } from "@material-ui/core/styles";
-// import { Button } from "@material-ui/core";
-import "../style/Header.css"
+import "../style/Header.css";
 
 const Header = () => {
   return (

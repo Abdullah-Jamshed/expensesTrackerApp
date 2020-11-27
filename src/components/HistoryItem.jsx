@@ -2,7 +2,6 @@ import React from "react";
 import { Divider, makeStyles } from "@material-ui/core";
 import { connect } from "react-redux";
 import "../style/HistoryItem.css";
-// import firebase from "../config/firebase";
 import { deleteTransactionHistory } from "../store/actions/homeActions";
 
 const useStyles = makeStyles((theme) => ({
