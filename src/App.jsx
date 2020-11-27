@@ -12,12 +12,17 @@ import "./style/App.css";
 import { fetchCurrentBalance, fetchTotalIncome, fetchTotalExpense, fetchHistory } from "./store/actions/homeActions";
 
 const App = (props) => {
-  useEffect(() => {
+  
+  const fetchData = () => {
     props.fetchCurrentBalance();
     props.fetchTotalIncome();
     props.fetchTotalExpense();
     props.fetchHistory();
-  }, ["componentDidMount"]);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   return (
     <Container className='App' maxWidth='sm'>
