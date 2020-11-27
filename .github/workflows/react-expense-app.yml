@@ -31,13 +31,13 @@ jobs:
         run:  npm install
         
       # Creating a Build "build will not create if there is any warning in code"
-      - name: Create Build
-        run: npm run build
+#       - name: Create Build
+#         run: npm run build
         
-#       - name: Build React App
-#         run: |
-#           npm install # Install Dependencies
-#           CI=false npm run build # CI=false to ignore warnings
+      - name: Build React App
+        run: |
+          npm install # Install Dependencies
+          CI=false npm run build # CI=false to ignore warnings
       
       - name: Installing surge 
         run: npm install -g surge
