@@ -3,7 +3,7 @@ import { Button, makeStyles } from "@material-ui/core";
 import { connect } from "react-redux";
 import { resetApp } from "../store/actions/homeActions";
 
-const useStyle = makeStyles((theme) => ({
+const useStyle = makeStyles(() => ({
   root: {
     paddingLeft: "10px",
   },
@@ -23,13 +23,11 @@ const Reset = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {};
-};
+
 const mapDispatchToProps = (dispatch) => {
   return {
     resetApp: () => dispatch(resetApp()),
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Reset);
+export default connect(null, mapDispatchToProps)(Reset);

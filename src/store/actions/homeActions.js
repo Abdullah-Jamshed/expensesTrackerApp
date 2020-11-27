@@ -59,13 +59,13 @@ const transactionAmountAction = (amount) => {
 };
 
 const transactionDeposite = ({ newBalance, totalIncome }) => {
-  return (dispatch) => {
+  return () => {
     firebase.database().ref("/").child("/currentBalance").set(newBalance);
     firebase.database().ref("/").child("/totalIncome/value").set(totalIncome);
   };
 };
 const transactionPayment = ({ newBalance, totalExpense }) => {
-  return (dispatch) => {
+  return () => {
     firebase.database().ref("/").child("/currentBalance").set(newBalance);
     firebase.database().ref("/").child("/totalExpense/value").set(totalExpense);
   };
@@ -95,17 +95,17 @@ const fetchHistory = () => {
 const addTransactionHistory = (transaction) => {
   var historyKey = firebase.database().ref().child("history").push().key;
   const transactionObj = { ...transaction, id: historyKey };
-  return async (dispatch) => {
+  return async () => {
     firebase.database().ref("/").child(`history/${historyKey}`).set(transactionObj);
   };
 };
 const deleteTransactionHistory = (id) => {
-  return async (dispatch) => {
+  return async () => {
     firebase.database().ref("/").child(`/history/${id}`).remove();
   };
 };
 const resetApp = () => {
-  return async (dispatch) => {
+  return async () => {
     firebase.database().ref("/").remove();
   };
 };

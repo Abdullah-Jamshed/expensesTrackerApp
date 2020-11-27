@@ -4,7 +4,7 @@ import { Divider, makeStyles } from "@material-ui/core";
 import "../style/History.css";
 import HistoryItem from "./HistoryItem";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   divide: {
     height: "1.7px",
     marginBottom: "15px",
@@ -37,8 +37,5 @@ const mapStateToProps = (state) => {
     history: state.homeReducer.history,
   };
 };
-const mapDispatchToProps = () => {
-  return {};
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(History);
+export default connect(mapStateToProps, null)(History);

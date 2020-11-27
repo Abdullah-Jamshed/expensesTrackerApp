@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import firebase from "../config/firebase";
 import { Divider, Button, makeStyles } from "@material-ui/core";

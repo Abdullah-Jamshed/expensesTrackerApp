@@ -4,15 +4,13 @@ import { connect } from "react-redux";
 import "../style/HistoryItem.css";
 import { deleteTransactionHistory } from "../store/actions/homeActions";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
   divide: {
     marginBottom: "15px",
   },
 }));
 
-const deleteHistory = (id) => {
-  console.log("===>", id);
-};
+
 
 const HistoryItem = ({ discription, value, type, id, deleteTransactionHistory }) => {
   const transactionType = type === "income" ? "incomeBorder" : "expenseBorder";

@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 import { connect } from "react-redux";
-// import Parent from "./components/Parent";
-// import contextCounter from "./components/contextCounter";
 import Header from "./components/Header";
 import Balance from "./components/Balance";
 import Records from "./components/Records";
@@ -35,9 +33,6 @@ const App = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {};
-};
 const mapDispatchToProps = (dispatch) => {
   return {
     fetchCurrentBalance: () => dispatch(fetchCurrentBalance()),
@@ -47,4 +42,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);
