@@ -17,7 +17,7 @@ const App = (props) => {
     props.fetchTotalIncome();
     props.fetchTotalExpense();
     props.fetchHistory();
-  }, []);
+  }, ["componentDidMount"]);
 
   return (
     <Container className='App' maxWidth='sm'>

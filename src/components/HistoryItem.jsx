@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, makeStyles } from "@material-ui/core";
+import { Divider } from "@material-ui/core";
 import { connect } from "react-redux";
 import "../style/HistoryItem.css";
 import { deleteTransactionHistory } from "../store/actions/homeActions";
