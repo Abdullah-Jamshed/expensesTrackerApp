@@ -125,5 +125,3 @@ export {
   deleteTransactionHistory,
   resetApp,
 };
-
-// var newPostKey = firebase.database().ref().child('posts').push().key;

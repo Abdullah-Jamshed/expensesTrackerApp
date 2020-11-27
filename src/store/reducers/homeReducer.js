@@ -2,10 +2,7 @@ const INITIAL_STATE = {
   currentBalance: { value: "0.00", type: "balance" },
   income: { value: "0.00", type: "income" },
   expense: { value: "0.00", type: "expense" },
-  history: [
-    // { discription: "Discription1", value: "66", type: "income" },
-    // { discription: "Discription2", value: "55", type: "expense" },
-  ],
+  history: [],
   transactionType: null,
   transactionDiscription: "",
   transactionAmount: "",
@@ -17,8 +14,6 @@ export default (state = INITIAL_STATE, action) => {
     case "TRANSACTION":
       return {
         ...state,
-        // currentBalance: {...state.currentBalance, value:action.payload.transaction},
-        // income: {...state.currentBalance , value:action.payload.transaction}
       };
     case "CURRENT_BALANCE":
       return {
@@ -41,17 +36,10 @@ export default (state = INITIAL_STATE, action) => {
       const historyObj = action.payload.transactionHistory;
       const historyObjKeyArray = Object.keys(historyObj);
       const historyArray = historyObjKeyArray.map((key) => historyObj[key]);
-      // console.log(history)
       return {
         ...state,
         history: historyArray,
       };
-
-    // case "ADD_TRANSACTION_HISTORY":
-    //   return {
-    //     ...state,
-    //     history: [...state.history, action.payload.transaction],
-    //   };
 
     case "TRANSACTION_TYPE":
       return {
