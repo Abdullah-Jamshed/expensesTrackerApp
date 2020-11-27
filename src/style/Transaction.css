@@ -11,18 +11,9 @@
 .transactionSelection {
   margin: 0px auto;
   text-align: center;
-  /* background-color: red; */
 }
 
 .transactionSelection i {
   margin-right: 5px !important;
   font-size: 18px;
 }
-
-/* 
-.TransactionField{
-    margin-top: 10px;
-    text-align: left; 
-    background-color: aqua;
-} */
-

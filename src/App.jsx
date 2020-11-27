@@ -48,16 +48,3 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
-
-// import { connect } from "react-redux";
-
-// const mapStateToProps = (state) => {
-//   return {
-// currentBalance: state.homeReducer.currentBalance
-// }
-// };
-// const mapDispatchToProps = () => {
-//   return {};
-// };
-
-// export default connect(mapStateToProps, mapDispatchToProps)();
